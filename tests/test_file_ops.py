@@ -31,7 +31,7 @@ class TestFileOps(unittest.TestCase):
         self.assertFalse(self.file_path.exists())
 
     def test_delete_file(self):
-        delete_file(str(self.file_path))
+        delete_file(str(self.file_path), confirm=False)
         self.assertFalse(self.file_path.exists())
 
 if __name__ == "__main__":
